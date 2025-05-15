@@ -1,0 +1,258 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Container Layout */
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+  }
+  
+  /* Dark Mode Button */
+  .dark-mode-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dark-mode-btn:hover {
+    background-color: #256429;
+  }
+  
+  /* Date Picker */
+  .date-picker {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #datePicker {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  #taskSearchInput {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+  }
+  
+  #taskSearchInput:focus {
+    border-color: #2e7d32;
+    outline: none;
+  }
+  
+  /* Task Input Section */
+  .task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+  }
+  
+  .input-field:focus {
+    border-color: #2e7d32;
+    outline: none;
+  }
+  
+  .primary-btn {
+    padding: 12px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .primary-btn:hover {
+    background-color: #256429;
+  }
+  
+  /* Task List */
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: background-color 0.3s;
+  }
+  
+  .task-text {
+    flex-grow: 1;
+    font-size: 1.05rem;
+    margin-left: 12px;
+  }
+  
+  /* Priority Colors */
+  .low-priority {
+    border-left: 6px solid #81c784;
+  }
+  
+  .medium-priority {
+    border-left: 6px solid #ffb74d;
+  }
+  
+  .high-priority {
+    border-left: 6px solid #e57373;
+  }
+  
+  /* Completed Task */
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  /* Checkboxes */
+  .task-complete-checkbox {
+    transform: scale(1.4);
+    margin-right: 10px;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #e53935;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .delete-btn:hover {
+    color: #b71c1c;
+  }
+  
+  /* Progress Section */
+  #taskProgressContainer {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  #taskProgressLabel {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  #taskProgress {
+    width: 100%;
+    height: 18px;
+    border-radius: 10px;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  }
+  
+  body.dark-mode .task-item {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .input-field,
+  body.dark-mode #taskSearchInput,
+  body.dark-mode #datePicker {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+  }
+  
+  body.dark-mode .primary-btn,
+  body.dark-mode .dark-mode-btn {
+    background-color: #388e3c;
+  }
+  
+  body.dark-mode .primary-btn:hover,
+  body.dark-mode .dark-mode-btn:hover {
+    background-color: #2e7d32;
+  }
+  
+  body.dark-mode .delete-btn {
+    color: #ef5350;
+  }
+  
+  body.dark-mode .delete-btn:hover {
+    color: #f44336;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .task-input {
+      flex-direction: column;
+    }
+  
+    .task-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  

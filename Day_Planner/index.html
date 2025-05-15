@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Day Planner</h1>
+      <button id="toggleDarkMode" class="dark-mode-btn">🌙 Switch to Dark Mode</button>
+    </header>
+    
+    <!-- Date Picker for Tasks -->
+    <div class="date-picker">
+      <input type="date" id="datePicker" value="" />
+    </div>
+
+    <!-- Task Input Section -->
+    <div class="task-input">
+      <select id="prioritySelect" class="input-field">
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <textarea id="taskInput" class="input-field" placeholder="Enter your task..."></textarea>
+      <button id="addTaskBtn" class="primary-btn">Add Task</button>
+    </div>
+
+    <!-- Search Bar -->
+<div class="search-bar">
+    <input type="text" id="taskSearchInput" placeholder="Search tasks..." />
+  </div>
+  
+
+    <!-- Task List -->
+    <div id="taskList" class="task-list"></div>
+
+    <!-- Progress Section -->
+    <div id="taskProgressContainer">
+      <div id="taskProgressLabel">Progress: 0%</div>
+      <progress id="taskProgress" value="0" max="100"></progress>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
